@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+/**
+ * برای بدست آوردن موقعیت جغرافیایی کاربر استفاده می شود
+ 
+ */
+function getLocation() {
+  /**این امر باعث می شود مرورگر کاربر از وی اجازه دسترسی به داده های موقعیت مکانی خود را بخواهد
+  *اگر دسترسی را کاربر قبول کند مرورگر از امکانات موجود مثل جی پی اس استفاده می کند
+  geo = navigator.geolocation*/
+  if (navigator.geolocation) {
+    /**Geolocation.getCurrentPosition(): Retrieves the device's current location.
+     *navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+     A callback function that takes a GeolocationPosition object as its sole input parameter.
+     * مکان فعلی دستگاه را بازیابی می کند.
+     *  */
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+/**مختصات موقعیت کاربر
+طول و عرض جغرافیایی
+*/
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
