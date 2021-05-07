@@ -1,0 +1,54 @@
+body {
+    background-color: #eee;
+  }
+  .container{
+    border: 1px solid gainsboro;
+    overflow-x: auto;
+    width: 70%;
+    margin:30vh auto;
+    background-color: white;
+  }
+  ::-webkit-scrollbar {
+    background-color: white;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(109, 108, 108); 
+    border-radius: 2px;
+  }
+  
+  table th,
+  table td {
+    text-align: center;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #bef2f5;
+  }
+  table tr:nth-child(odd) {
+    background-color: rgb(177, 22, 22);
+    /* background-color: transparent; */
+  }
+  .pagination li:hover {
+    cursor: pointer;
+  }
+  table tbody tr {
+    display: none;
+  }
+  .pagination>li>a,.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+      z-index: 3;
+      color: #fff;
+      cursor: default;
+      background-color: #337ab7;
+      border-color: #337ab7;
+  }
