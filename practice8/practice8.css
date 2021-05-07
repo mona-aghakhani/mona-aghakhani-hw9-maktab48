@@ -1,0 +1,31 @@
+body{
+	text-align: center;
+}
+.incremental-input {
+	max-width: 13.2rem;
+	margin: auto;
+}
+div{
+	display: flex;
+}
+button{
+	width: 38px;
+	border: none;
+outline: none;
+
+}
+
+input{
+	
+	text-align: center;
+	background-color: rgb(165, 162, 162);
+}
+.incremental-input input[type=text] {
+	border-left: none;
+}
+
+.incremental-input .input-group-addon {
+	background: #fff;
+	cursor: pointer; 
+}
+
